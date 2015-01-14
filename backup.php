@@ -20,22 +20,22 @@
  */
 
 if (!class_exists('webdav_client')) {
- require('/full/path/to/class_webdav_client.php');
+ require('./class_webdav_client.php');
 }
 $wdc = new webdav_client();
 
 /**
  * Here are your specific settings needed
  */
-$wdc->set_server('webdav.example.com');				// to which server should be connected
-$wdc->set_user('username');							// your username to authenticate
+$wdc->set_server('dav.box.net');				// to which server should be connected
+$wdc->set_user('something@email.com');							// your username to authenticate
 $wdc->set_pass('password');							// your password to authenticate with the server
  
 $pathLoc = '/path/to/local/backups/';				// which dir do you wish to backup
 $pathExt = '/path/to/external/backup/collection/';	// where should this backup be transfered to
 
 $mail = false;										// is mailsystem activated (php sendmail required)
-$mailTo = 'admin@gmail.com';						// where should output go to
+$mailTo = 'My@gmail.com';						// where should output go to
 
 $wdc->set_ssl(1);									// is ssl required?
 $wdc->set_port(443);								// on which port does the webdav server listen (ssl mostly 443, unencryptet 80)
